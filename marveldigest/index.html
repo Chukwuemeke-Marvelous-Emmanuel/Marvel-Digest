@@ -44,17 +44,26 @@
    <button class="subscribe" id="subscribe-btn"><a href="./Subscribe/indexsubscribe.html">Subscribe</a>
   </button>
     <!-- Open Graph -->
-  <meta property="og:type"   content="article" />
-  <meta property="og:title"  content="How to Optimize Your Workflow" />
-  <meta property="og:description" content="Learn best practices for streamlining your daily workflow." />
-  <meta property="og:url"    content="https://www.marveldigest.com/posts/optimize-workflow.html" />
-  <meta property="og:image"  content="https://www.marveldigest.com/images/workflow-cover.jpg" />
+<!-- Basic SEO -->
+<title>{{ pageTitle }} | MarvelDigest</title>
+<meta name="description" content="{{ pageDescription }}">
+<meta name="keywords" content="news,politics,religion,sport,bizzare,entertainment,science,culture history,technology,health,travel,education,business,food,fashion,environment,wildlife,space,opinion,AI,social,society,books articles, real estate, MarvelDigest">
+<meta name="robots" content="index, follow">
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="How to Optimize Your Workflow" />
-  <meta name="twitter:description" content="Learn best practices for streamlining your daily workflow." />
-  <meta name="twitter:image"       content="https://www.marveldigest.com/images/workflow-cover.jpg" />
+<!-- Open Graph for social -->
+<meta property="og:title" content="{{ pageTitle }} | MarvelDigest">
+<meta property="og:description" content="{{ pageDescription }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://marveldigest.com/{{ pageSlug }}">
+<meta property="og:image" content="https://marveldigest.com/{{ pageImage }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MarvelDigest">
+<meta name="twitter:title" content="{{ pageTitle }}">
+<meta name="twitter:description" content="{{ pageDescription }}">
+<meta name="twitter:image" content="https://marveldigest.com/{{ pageImage }}">
+
  <!--  JSON-LD for Microsoft News / Bing / Rich Results -->
  
   <script>
@@ -429,6 +438,20 @@
       </div>
      </div>
     </div>
+    
+    <!--Real estate-->
+    
+      <div class="dropdown">
+     <div class="select">
+      <span class="selected">
+       Real Estate
+      </span>
+      <ul class="submenu">
+       <li data-category="all real estate">
+        <a href="./Real estate/index.html">
+         Real Estate
+        </a>
+       </li>
     <!-- Dropdown: History -->
     <div class="dropdown">
      <div class="select">
@@ -1349,95 +1372,7 @@
        </i>
       </div>
      </div>
-    </div>
-    <div class="dropdown">
-     <div class="select">
-      <span class="selected">
-       Real Estate
-      </span>
-      <ul class="submenu">
-       <li data-category="all real estate">
-        <a href="./Real estate/index.html">
-         Real Estate
-        </a>
-       </li>
-       <!--
-       <li data-category="buying">
-        <a href="/buying">
-         Buying
-        </a>
-       </li>
-       <li data-category="selling">
-        <a href="/selling">
-         Selling
-        </a>
-       </li>
-       <li data-category="renting">
-        <a href="/renting">
-         Renting
-        </a>
-       </li>
-       <li data-category="leasing">
-        <a href="/leasing">
-         Leasing
-        </a>
-       </li>
-       <li data-category="mortgage">
-        <a href="/mortgage">
-         Mortgage
-        </a>
-       </li>
-       <li data-category="financing">
-        <a href="/financing">
-         Financing
-        </a>
-       </li>
-       <li data-category="investment">
-        <a href="/investment">
-         Investment
-        </a>
-       </li>
-       <li data-category="property management">
-        <a href="/property-management">
-         Property Management
-        </a>
-       </li>
-       <li data-category="real estate market">
-        <a href="/real-estate-market">
-         Real Estate Market
-        </a>
-       </li>
-       <li data-category="real estate agent">
-        <a href="/real-estate-agent">
-         Real Estate Agent
-        </a>
-       </li>
-       <li data-category="landscaping">
-        <a href="/landscaping">
-         Landscaping
-        </a>
-       </li>
-       <li data-category="home improvement">
-        <a href="/home-improvement">
-         Home Improvement
-        </a>
-       </li>
-       <li data-category="interior design">
-        <a href="/interior-design">
-         Interior Design
-        </a>
-       </li>
-       <li data-category="home staging">
-        <a href="/home-staging">
-         Home Staging
-        </a>
-       </li>
-       <li data-category="home inspection">
-        <a href="/home-inspection">
-         Home Inspection
-        </a>
-       </li>
-      </ul>-->
+    </div>  
       <div class="caret">
        <i class="fa-solid fa-chevron-down">
        </i>
