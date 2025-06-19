@@ -10,6 +10,7 @@
   <!-- Font Awesome for icons -->
   <script crossorigin="anonymous" src="https://kit.fontawesome.com/1f011bb796.js">
   </script>
+  
   <!-- Netlify Identity (for Git Gateway auth) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js">
   </script>
@@ -3762,6 +3763,25 @@
   document.getElementById('share-fb').href =
     `https://www.facebook.com/sharer/sharer.php?u=${url}`;
 </script>
+ <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Helper: set loading mode if not explicitly exempted or already set
+    function applyLazy(nodeList) {
+      nodeList.forEach(el => {
+        // if developer has flagged it as exempt or already has a loading attribute, skip
+        if (el.classList.contains('lazy-exempt') || el.hasAttribute('loading')) return;
+        el.setAttribute('loading', 'lazy');
+      });
+    }
+
+    // Lazy-load images
+    applyLazy(document.querySelectorAll('img'));
+
+    // Lazy-load iframes (e.g. YouTube embeds)
+    applyLazy(document.querySelectorAll('iframe'));
+  });
+</script>
+
   <!-- JavaScript to handle sidebar and submenu toggles -->
   <script src="script.js"></script>
   <script src="script.js" defer></script>
