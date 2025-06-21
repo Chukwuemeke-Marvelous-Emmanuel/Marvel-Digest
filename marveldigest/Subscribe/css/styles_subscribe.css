@@ -41,6 +41,7 @@ body {
      -webkit-text-fill-color: transparent;
      background-size: 300% 300%;
      animation: gradient 8s ease-in-out infinite;
+     margin-right: 80px;
   }
   @keyframes Gradient{
     0% {
