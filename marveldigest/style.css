@@ -46,7 +46,19 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: larger;
   }
+  .marvel-digest{
+  
+  width: 45px;
+  display: inline-block; 
+  position: absolute;
+  top: 8px;
+  margin-left: 173px;
+  background-color: black;
+  border-radius: 35px;
+  
+}
   .marvel {
+    position:relative;
     text-decoration: none;
      background: linear-gradient(135deg,#ff00d2,#fed90f,
       #00a2ff,#09f1b8,#ff00d2,#fed90f,#00a2ff,#09f1b8);
