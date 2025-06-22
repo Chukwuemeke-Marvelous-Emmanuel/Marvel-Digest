@@ -21,4 +21,6 @@ git commit -m "Profile README:nslookup www.marveldigest.com 8.8.8.8
 "
 git push
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b0a9bfc-92d2-49ab-acbc-5236abfe905d/deploy-status)](https://app.netlify.com/projects/marveldigest/deploys)
+
 
