@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://marveldigest.com/</loc>
-    <lastmod>2025-06-21</lastmod>
-    <priority>1.00</priority>
-  </url>
-  <url>
-    <loc>https://marveldigest.com/about</loc>
-    <lastmod>2025-06-22</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <!-- add one <url> block per page -->
-</urlset>
+<?xml version="1.0"?>
+<users>
+	<user>481CCEFFF39A22EE358F8C54EBDFD270</user>
+</users>
