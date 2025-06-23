@@ -1,18 +1,18 @@
      
-         backend:
-         name: git-gateway        # or use "github" if you prefer OAuth App
-         branch: main             # default branch to commit content
+      backend:
+      name: git-gateway        
+      branch: main             
 
-         media_folder: "static/images/uploads"     # where uploaded images go in repo
-         public_folder: "/images/uploads"          # how they’re referenced in your site
+      media_folder: "static/images/uploads"     
+      public_folder: "/images/uploads"        
 
-         collections:
-       - name: "posts"
-         label: "Blog Posts"
-        folder: "content/posts"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-        fields:
+      collections:
+      - name: "posts"
+      label: "Blog Posts"
+      folder: "content/posts"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "thumbnail", widget: "image" }
