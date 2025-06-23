@@ -1,23 +1,23 @@
-      backend:
-       name: git-gateway
-      branch: main
+     
+         backend:
+         name: git-gateway        # or use "github" if you prefer OAuth App
+         branch: main             # default branch to commit content
 
-      media_folder: "static/uploads"
-      public_folder: "/uploads"
+         media_folder: "static/images/uploads"     # where uploaded images go in repo
+         public_folder: "/images/uploads"          # how they’re referenced in your site
 
-      collections:
-      - name: "posts"
-      label: "Posts"
-      folder: "posts"
-      create: true
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-      fields:
+         collections:
+       - name: "posts"
+         label: "Blog Posts"
+        folder: "content/posts"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - label: "Category"
-        name: "category"
-        widget: "select"
+  
 
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body",  name: "body",  widget: "markdown" }
@@ -734,7 +734,7 @@
       - {label: "social accountability", value: "social accountability"}
       - {label: "social ethics",value: "social ethics"}
       - {label: "social morality", value: morality"}
-      - {label: "social norms", value : "social norms"}
+      - {label: "social norms", value : "social norms"}];
 
       
 
