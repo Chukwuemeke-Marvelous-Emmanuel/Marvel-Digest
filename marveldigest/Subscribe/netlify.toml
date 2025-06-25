@@ -4,6 +4,12 @@
   # netlify.toml
   command = "npm run build"
 
+  [[headers]]
+  for = "/*.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+
 [[headers]]
   for = "/*"
   [headers.values]
