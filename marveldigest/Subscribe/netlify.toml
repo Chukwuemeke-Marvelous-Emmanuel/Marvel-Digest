@@ -4,15 +4,14 @@
   # netlify.toml
   command = "npm run build"
 
-  [[headers]]
-  for = "/*.xml"
-  [headers.values]
-    Content-Type = "application/xml"
-
+ 
+    
 
 [[headers]]
   for = "/*"
   [headers.values]
+  Content-Type = "application/xml"
+
     Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
