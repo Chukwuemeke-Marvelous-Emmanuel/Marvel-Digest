@@ -17,11 +17,7 @@
 
 [[redirects]] from   = "/api/*" to     = "/.netlify/functions/:splat" status = 200 force  = true
 
-SPA fallback
-
 [[redirects]] from   = "/*" to     = "/index.html" status = 200 force  = true
-
-Production environment variables
 
 [context.production.environment] FB_PAGE_ACCESS_TOKEN     = "$FB_PAGE_ACCESS_TOKEN" IG_BUSINESS_ACCOUNT_ID   = "$IG_BUSINESS_ACCOUNT_ID" TWITTER_BEARER_TOKEN     = "$TWITTER_BEARER_TOKEN" REDDIT_CLIENT_ID         = "$REDDIT_CLIENT_ID" REDDIT_CLIENT_SECRET     = "$REDDIT_CLIENT_SECRET" REDDIT_USERNAME          = "$REDDIT_USERNAME" REDDIT_PASSWORD          = "$REDDIT_PASSWORD" PINTEREST_ACCESS_TOKEN   = "$PINTEREST_ACCESS_TOKEN" PINTEREST_BOARD_ID       = "$PINTEREST_BOARD_ID" SITE_URL                 = "$SITE_URL" SUBREDDIT                = "$SUBREDDIT"
 
