@@ -21,15 +21,14 @@
 
 [context.production.environment] FB_PAGE_ACCESS_TOKEN     = "$FB_PAGE_ACCESS_TOKEN" IG_BUSINESS_ACCOUNT_ID   = "$IG_BUSINESS_ACCOUNT_ID" TWITTER_BEARER_TOKEN     = "$TWITTER_BEARER_TOKEN" REDDIT_CLIENT_ID         = "$REDDIT_CLIENT_ID" REDDIT_CLIENT_SECRET     = "$REDDIT_CLIENT_SECRET" REDDIT_USERNAME          = "$REDDIT_USERNAME" REDDIT_PASSWORD          = "$REDDIT_PASSWORD" PINTEREST_ACCESS_TOKEN   = "$PINTEREST_ACCESS_TOKEN" PINTEREST_BOARD_ID       = "$PINTEREST_BOARD_ID" SITE_URL                 = "$SITE_URL" SUBREDDIT                = "$SUBREDDIT"
 
-Skip Netlify post-processing if desired
 
 [build.processing] skip_processing = false
 
-Run a custom script after build
+
 
 [build.lifecycle] post_build = "node scripts/post-build.js"
 
 
-postToSocial.js"
+"postToSocial.js"
 
 
