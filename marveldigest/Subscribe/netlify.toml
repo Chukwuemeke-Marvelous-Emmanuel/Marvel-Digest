@@ -11,9 +11,9 @@
 
 [[plugins]] package = "@netlify/plugin-zip-it-and-ship-it" nodeVersion            = "16.x" functionsDir           = "functions" packageManager         = "npm" packageManagerVersion  = "8.x" includeFiles           = ["public//*", "functions//"] excludeFiles           = ["node_modules/**/", "public//*.map", "functions//*.map"] includePackageJson     = true includePackageLockJson = true
 
-[[headers]] for = "/*" [headers.values] Content-Type                = "application/xml" Strict-Transport-Security   = "max-age=63072000; includeSubDomains; preload" X-Frame-Options             = "DENY" X-Content-Type-Options      = "nosniff" Referrer-Policy             = "no-referrer-when-downgrade" Permissions-Policy          = "geolocation=(), microphone=()" Content-Security-Policy     = "default-src 'self'; img-src 'self' https://cdn.example.com; script-src 'self'; style-src 'self';" X-XSS-Protection            = "1; mode=block" Cache-Control               = "no-cache, no-store, must-revalidate" Pragma                      = "no-cache" Expires                     = "0"
+[[headers]] for = "/*" Content-Type                = "application/xml" Strict-Transport-Security   = "max-age=63072000; includeSubDomains; preload" X-Frame-Options             = "DENY" X-Content-Type-Options      = "nosniff" Referrer-Policy             = "no-referrer-when-downgrade" Permissions-Policy          = "geolocation=(), microphone=()" Content-Security-Policy     = "default-src 'self'; img-src 'self' https://cdn.example.com; script-src 'self'; style-src 'self';" X-XSS-Protection            = "1; mode=block" Cache-Control               = "no-cache, no-store, must-revalidate" Pragma                      = "no-cache" Expires                     = "0"
 
-Redirect API calls to functions
+
 
 [[redirects]] from   = "/api/*" to     = "/.netlify/functions/:splat" status = 200 force  = true
 
