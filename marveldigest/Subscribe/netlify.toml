@@ -4,9 +4,8 @@
 
 #Automatically generate sitemap.xml at each build
 
-[[plugins]] package = "@netlify/plugin-sitemap" [plugins.inputs] sitemapPath   = "sitemap.xml" changefreq    = "daily" priority      = 0.5 trailingSlash = true
+[[plugins]] package = "@netlify/plugin-sitemap" sitemapPath   = "sitemap.xml" changefreq    = "daily" priority      = 0.5 trailingSlash = true
 
-Minify HTML, CSS, and JS
 
 [[plugins]] package = "@netlify/plugin-minify-html" [plugins.inputs] minifyJS   = true minifyCSS  = true minifyHTML = true
 
