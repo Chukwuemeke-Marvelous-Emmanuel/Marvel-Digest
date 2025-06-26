@@ -1,5 +1,5 @@
 User-agent: *
-allow:
+Disallow:
 
 Sitemap: https://marveldigest.com/sitemap.xml
 https://marveldigest.com/robots.txt
