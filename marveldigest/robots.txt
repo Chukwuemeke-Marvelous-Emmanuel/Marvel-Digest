@@ -2,3 +2,4 @@ User-agent: *
 allow:
 
 Sitemap: https://marveldigest.com/sitemap.xml
+https://marveldigest.com/robots.txt
