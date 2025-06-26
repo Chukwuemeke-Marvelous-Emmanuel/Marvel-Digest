@@ -7,7 +7,7 @@
   package = "@netlify/plugin-sitemap"
 
    
-   buildDir = publish (above)
+   buildDir = publish
    filePath = "sitemap.xml"
   [plugins.inputs]
     buildDir = "public"
