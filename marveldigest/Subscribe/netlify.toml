@@ -27,7 +27,7 @@
 
 
 [build.lifecycle] post_build = "node scripts/post-build.js"
-Script/posttosocial.js
+
 
 
 
