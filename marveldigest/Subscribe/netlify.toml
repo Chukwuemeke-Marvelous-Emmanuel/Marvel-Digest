@@ -1,5 +1,5 @@
 [build]
-   adjust this to whatever directory your static site ends up in:
+   
   publish = "public"
   command = "npm run build"
 
