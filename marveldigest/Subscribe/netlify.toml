@@ -7,9 +7,7 @@
 [[plugins]] package = "@netlify/plugin-sitemap" sitemapPath   = "sitemap.xml" changefreq    = "daily" priority      = 0.5 trailingSlash = true
 
 
-[[plugins]] package = "@netlify/plugin-minify-html" [plugins.inputs] minifyJS   = true minifyCSS  = true minifyHTML = true
-
-Bundle and ship functions
+[[plugins]] package = "@netlify/plugin-minify-html" minifyJS   = true minifyCSS  = true minifyHTML = true
 
 [[plugins]] package = "@netlify/plugin-zip-it-and-ship-it" [plugins.inputs] nodeVersion            = "16.x" functionsDir           = "functions" packageManager         = "npm" packageManagerVersion  = "8.x" includeFiles           = ["public//*", "functions//"] excludeFiles           = ["node_modules/**/", "public//*.map", "functions//*.map"] includePackageJson     = true includePackageLockJson = true
 
