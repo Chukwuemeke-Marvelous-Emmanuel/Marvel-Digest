@@ -1,4 +1,4 @@
-netlify.toml — Netlify configuration for Marveldigest.com
+#netlify.toml — Netlify configuration for Marveldigest.com
 
 [build] publish   = "public"        # Directory to publish command   = "npm run build" # Build command functions = "functions"     # Functions directory
 
