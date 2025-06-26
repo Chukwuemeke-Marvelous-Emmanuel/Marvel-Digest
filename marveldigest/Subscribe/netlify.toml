@@ -2,7 +2,7 @@
 
 [build] publish   = "public"        # Directory to publish command   = "npm run build" # Build command functions = "functions"     # Functions directory
 
-Automatically generate sitemap.xml at each build
+#Automatically generate sitemap.xml at each build
 
 [[plugins]] package = "@netlify/plugin-sitemap" [plugins.inputs] sitemapPath   = "sitemap.xml" changefreq    = "daily" priority      = 0.5 trailingSlash = true
 
