@@ -6,7 +6,7 @@
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
-   these inputs are optional; they'll default to:
+   
    buildDir = publish (above)
    filePath = "sitemap.xml"
   [plugins.inputs]
