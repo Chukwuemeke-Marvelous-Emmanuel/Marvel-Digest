@@ -1,22 +1,22 @@
 [build]
-  # adjust this to whatever directory your static site ends up in:
+   adjust this to whatever directory your static site ends up in:
   publish = "public"
   command = "npm run build"
 
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
-  # these inputs are optional; they'll default to:
-  # buildDir = publish (above)
-  # filePath = "sitemap.xml"
+   these inputs are optional; they'll default to:
+   buildDir = publish (above)
+   filePath = "sitemap.xml"
   [plugins.inputs]
     buildDir = "public"
-    # filePath = "sitemap.xml"
+     filePath = "sitemap.xml"
 
 [build]
   publish = "dist"
   functions = "functions"
-  # netlify.toml
+   netlify.toml
   command = "npm run build"
 
  
