@@ -1,7 +1,7 @@
      
       backend:
       name: git-gateway   
-      repo: your-username/your-repo
+      repo: chukwuemeke-Marvelous-Emmanuel/Marvel-Digest
       branch: main             
 
       media_folder: "static/images/uploads"     
