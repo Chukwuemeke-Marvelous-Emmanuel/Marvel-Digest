@@ -5,6 +5,10 @@
   command   = "npm run build"   # Build command
   functions = "functions"       # Functions directory
 
+[build]
+  command = "npm install && npm run lint && npm run build"
+  publish = "dist/"
+
 # Automatically generate sitemap.xml at each build
 [[plugins]]
   package = "@netlify/plugin-sitemap"
