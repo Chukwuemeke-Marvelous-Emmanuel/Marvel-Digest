@@ -1,66 +1,62 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Content Manager</title>
-  </head>
-  <body>
-    <!-- Netlify CMS will mount here -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Content Manager</title>
+  <!-- Load the Decap CMS application -->
+  <script src="https://unpkg.com/@decap-cms/app/dist/decap-cms-app.js"></script>
+</head>
+<body>
+  <!-- This is where the CMS UI will appear -->
+  <div id="decap-cms-root"></div>
+
+  <script>
+    // Tell Decap CMS you’ll init it yourself
+    window.DECAP_CMS_MANUAL_INIT = true;
+
+    // Wait for the DOM, then initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      decap.init({
+        config: '/admin/config.yml',    // your CMS config file
+        root: '#decap-cms-root'         // the div where it mounts
+      });
+
+      // Once CMS is ready, register previews & widgets
+      decap.on('preloaded', () => {
+        // Example: register a custom preview template
+        decap.registerPreviewTemplate('index', function (entry, widgetFor) {
+          // entry is the data, widgetFor('body') gives rendered markdown/html
+          return `
+            <article>
+              <h1>${entry.getIn(['data', 'title'])}</h1>
+              <div>${widgetFor('body')}</div>
+            </article>`;
+        });
+
+        // Example: add a custom block component
+        decap.registerEditorComponent({
+          id: "custom-component",
+          label: "Custom Component",
+          fields: [
+            { name: "text",  label: "Text",  widget: "string" },
+            { name: "image", label: "Image", widget: "image"  }
+          ],
+          pattern: /^<custom-component text="(.+)" image="(.+)">$/,
+          fromBlock: match => ({ text: match[1], image: match[2] }),
+          toBlock: obj    => `<custom-component text="${obj.text}" image="${obj.image}">`,
+          toPreview: obj  => `<div>${obj.text}<br><img src="${obj.image}" alt="${obj.text}"></div>`
+        });
+
+        // Example: register a simple widget
+        decap.registerWidget('custom-widget', {
+          // parse the widget’s markdown/html
+          pattern: /^<custom-widget>([\s\S]+)<\/custom-widget>$/,
+          fromBlock: match => ({ content: match[1] }),
+          toBlock: obj     => `<custom-widget>${obj.content}</custom-widget>`,
+          toPreview: obj   => `<div class="custom-widget-preview">${obj.content}</div>`
+        });
+      });
+    });
+  </script>
+</body>
 </html>
-<script>
-  // Initialize Netlify CMS
-  if (window.CMS) {
-    window.CMS.init();
-  } else {
-    console.error("Netlify CMS is not loaded.");
-  }
-    // Optionally, you can configure CMS here
-    window.CMS.registerPreviewStyle("/admin/categories/admin/index.css", { raw: true });
-    window.CMS.registerPreviewTemplate("index", "/admin/categories/admin/index.html");
-    window.CMS.registerEditorComponent({
-      id: "custom-component",
-      label: "Custom Component",
-      fields: [
-        { name: "text", label: "Text", widget: "string" },
-        { name: "image", label: "Image", widget: "image" }
-      ],
-      pattern: /^<custom-component text="(.*)" image="(.*)">$/,
-      fromBlock: function(match) {
-        return {
-          text: match[1],
-          image: match[2]
-        };
-      },
-      toBlock: function(obj) {
-        return `<custom-component text="${obj.text}" image="${obj.image}">`;
-      },
-      toPreview: function(obj) {
-        return `<div>${obj.text} <img src="${obj.image}" alt="${obj.text}"></div>`;
-      }
-    });
-</script>
-<script>
-  // Custom script to handle additional functionality
-  document.addEventListener("DOMContentLoaded", function() {
-    console.log("Netlify CMS is ready.");
-    // Add any additional initialization code here
-    window.CMS.registerWidget("custom-widget", {
-      // Define your custom widget here
-      // This is just a placeholder for demonstration
-      pattern: /^<custom-widget>(.*)<\/custom-widget>$/,
-      fromBlock: function(match) {
-        return { content: match[1] };
-      },
-      toBlock: function(obj) {
-        return `<custom-widget>${obj.content}</custom-widget>`;
-      },
-      toPreview: function(obj) {
-        return `<div class="custom-widget-preview">${obj.content}</div>`;
-      }
-    });
-  });
-</script>
-
-
